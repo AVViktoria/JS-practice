@@ -212,21 +212,106 @@
 // console.log(calculateTotalPrice("Droid"));
 
 
-function makeTask(data) {
-  const completed = false;
-  const category = "General";
-  const priority = "Normal";
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
   
   
-  return  {
-      category: category,
-      priority: priority,
-      ...data,
-      completed: completed,
-    };
-  }
+//   return  {
+//       category: category,
+//       priority: priority,
+//       ...data,
+//       completed: completed,
+//     };
+//   }
   
-  console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }));
-  console.log(makeTask({ priority: "Low", text: "Choose shampoo" }));
-  console.log(makeTask({})); 
+//   console.log(makeTask({ category: "Homemade", priority: "Low", text: "Take out the trash" }));
+//   console.log(makeTask({ priority: "Low", text: "Choose shampoo" }));
+//   console.log(makeTask({})); 
 //{ category: "General", priority: "Normal", completed: false }
+
+// Change code below this line
+// function findMatches(args1, ...args2) {
+//   const matches = []; 
+//   for (const arg in args1){
+//    if (args2.includes(args1[arg])){ 
+//     matches.push(args1[arg]);
+    
+//     }
+//   }
+//   return matches;
+// }
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+
+// function getCommonElements(array1, array2) {
+//   let commonElements = [];
+//   for (let i=0; i <= array1.length; i+=1){
+//     if (array2.includes(array1[i])){
+//       commonElements.push(array1[i]);
+//     }
+//   }
+//   return commonElements;
+// }
+// const bookShelf = {
+ 
+//   books: ["The last kingdom", "The guardian of dreams"],
+//   getBooks() {
+//     return "Returning all books";
+//   },
+//   addBook(bookName) {
+//     return `Adding book ${bookName}`;
+   
+//   },
+//   removeBook(bookName) {
+//     return `Deleting book ${bookName}`;
+//   },
+//   updateBook(bookName1, bookName2) {
+//     return `Updating book ${bookName1} to  ${bookName2}`;
+//   },
+//   }
+
+
+// console.log(bookShelf.getBooks());//"Returning all books"
+// console.log(bookShelf.addBook());//"Adding book Haze"
+// console.log(bookShelf.removeBook("Red sunset"));
+// // "Deleting book Red sunset"
+// console.log(bookShelf.updateBook("Sands of dune", "Dune"));
+// //"Updating book Sands of dune to Dune"
+
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+   
+//     const index = this.books.indexOf(oldName);
+//     this.books.splice(index, 1, newName);
+   
+//     return this.books;
+   
+//    }
+
+// };
+// console.log(bookShelf.updateBook("Haze", "Dungeon chronicles"));
+//["The last kingdom", "Dungeon chronicles", "The guardian of dreams"];
+
+const atTheOldToad = {
+ potions: [],
+
+  getPotions() {
+    return potions;
+  },
+
+  addBook(this) {
+    potions.push(this);
+  },
+  removeBook(this) {
+    const potionIndex = this.potions.indexOf(this);
+    this.potions.splice(potionIndex, 1);
+  },
+
+};
+
+console.log(atTheOldToad.potions);
+
+
+
