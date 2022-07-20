@@ -294,24 +294,202 @@
 // console.log(bookShelf.updateBook("Haze", "Dungeon chronicles"));
 //["The last kingdom", "Dungeon chronicles", "The guardian of dreams"];
 
-const atTheOldToad = {
- potions: [],
+// const atTheOldToad = {
+//  potions: [],
 
-  getPotions() {
-    return potions;
-  },
+//   getPotions() {
+//     return potions;
+//   },
 
-  addBook(this) {
-    potions.push(this);
-  },
-  removeBook(this) {
-    const potionIndex = this.potions.indexOf(this);
-    this.potions.splice(potionIndex, 1);
-  },
+//   addBook(this) {
+//     potions.push(this);
+//   },
+//   removeBook(this) {
+//     const potionIndex = this.potions.indexOf(this);
+//     this.potions.splice(potionIndex, 1);
+//   },
 
-};
+// };
 
-console.log(atTheOldToad.potions);
+// console.log(atTheOldToad.potions);
 
 
+// let i = 10;
+
+//  if (true){
+//     i = 15;
+//  }
+
+
+//  console.log(i);
+// let i = 10;
+
+// if (true) {
+//     let i = 15;
+//     if (true) {
+//         i = 25;
+//     }
+// }
+
+
+// console.log(i);
+// let c = 45;
+// if (true) {
+//   let i = 15
+//   b = 22
+//   console.log(c);
+//   let c = 15
+//   if (true) {
+//       i = 22
+//       b = 30
+//       let c = 40
+//   }
+//   b = 24
+// }
+
+
+
+
+
+// потрібно  порахувати за скільки днів Равлик зможе виповзти з колодязя
+// в день Равлик проповзає на 7 м в гору, а за ніч опускається на 2 м в низ
+// 42 м, виповзе за 8 днів
+// 17 м, виповзе за 3 дні
+// 18 м, виповзе за 4 дні
+
+// 1. Cтворюємо змінні const daySpeed = 7; const nightSpeed = 2; days = 0; 
+
+// 2. Робимо перевірку умови while
+
+// let depth = 17;
+// const daySpeed = 7;
+// const nightSpeed = 2;
+// const speed = 5;
+// let days = 0;
+// let totalPass = 0;
+
+// while (0 < depth){
+//   depth -= daySpeed;
+//   days += 1;
+//   if (0 < depth){
+//     depth += nightSpeed;
+//   }
+// }
+
+// console.log(days);
+
+// const all = ['Artem', 'Anna', 'Larisa', 'Maksim', 'Svetlana', 'David', 'Roman', 'Olga'];
+// const boys = ['Artem', 'Maksim', 'David', 'Roman'];
+
+// function getCommonElements(all, boys) {
+//   let commonElements = [];
+//   for (const item in all){
+//     if (!boys.includes(item){
+//       commonElements.push(item);
+//     }
+    
+//   }
+//   return commonElements;}
+//   console.log(getCommonElements(all, boys));
+
+//мой вариант не сделан
+  // Потрібно створити функцію яка буде находити в масиві 
+  //елементи що дублюються і потім ці елменти добавляти в 
+  //новий масив
+// const items = [1, 2, 3, 2, 1, 17, 19];
+// let commonEl = [];
+// function findElements(items) {
+// for (let i=0; i < items.length; i+=1){ 
+//    if (items.include(i) === True){
+//       commonEl.push(i);
+//   }
+// }
+// return commonEl;
+// }
+// console.log(commonEl);
+
+
+// 1. const items = [1, 2, 3, 2, 1, 1, 1, 1, 17, 19];
+// // 1. перебираємо масив
+// // 2. порівнюємо елемент з наступними елементами масиву
+// // 3. якщо масив містить елемент додаємо в новий масив
+
+// function findElements(items) {
+//   for (let i = 0; i < items.length; i += 1) {
+//     for (let j = i + 1; j < items.length; j += 1) {
+//       if (items[i] === items[j]) {
+//         items.splice(j, 1);
+//         j -= 1;
+//       }
+//     }
+//   }
+//   return items;
+// }
+// console.log(findElements(items));
+
+
+// Зробіть функцію, яка бере масив імен людей, які поставили лайки. Вона має повернути текст, 
+//як вказано у прикладах:
+
+// []                                -->  "no one likes this"
+// ["Peter"]                         -->  "Peter likes this"
+// ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+// ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+// ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+
+// total = [];
+function findElements(items) {
+  let message = `no one likes this`;
+switch(items.length){
+  case 0:
+  break;
+  case 1:
+    message =`${items[0]} likes this`;
+    break;
+    case 2:
+      message =`${items[0]} and ${items[1]} like this`;
+      break;
+      case 3:
+        message =`${items[0]}, ${items[1]} and ${items[2]} like this`;
+      break;
+    default:
+      message =`${items[0]}, ${items[1]} and (items.length - 2) others like this`;
+      
+
+}return message;
+
+console.log(findElements([]));
+console.log(findElements(["Peter"]));
+console.log(findElements(["Jacob", "Alex"]));
+console.log(findElements(["Max", "John", "Mark"]));
+
+
+// function nameLike(names) {
+//   let message = 'no one likes this';
+//   switch (names.length) {
+//     case 0:
+//       break;
+    
+//     case 1:
+//       message = `${names[0]} likes this`;
+//       break;
+    
+//     case 2:
+//       message = `${names[0]} and ${names[1]} likes this`;
+//       break;
+//     case 3:
+//       message = `${names[0]}, ${names[1]} and ${names[2]} likes this`;
+//       break;
+
+//     default: message = `${names[0]}, ${names[1]} and ${names.length - 2} likes this`;
+      
+//   }
+//   return message;
+// }
+// console.log(nameLike([]));
+// console.log(nameLike(["Peter"]));
+// console.log(nameLike(["Jacob", "Alex"]));
+// console.log(nameLike(["Max", "John", "Mark"]));
+// console.log(nameLike(["Alex", "Jacob", "Mark", "Max"]));
+// console.log(nameLike(["Alex", "Jacob", "Mark", "Max", "Marta", "Olha"]));
 
