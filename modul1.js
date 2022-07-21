@@ -438,30 +438,30 @@
 // ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
 
 // total = [];
-function findElements(items) {
-  let message = `no one likes this`;
-switch(items.length){
-  case 0:
-  break;
-  case 1:
-    message =`${items[0]} likes this`;
-    break;
-    case 2:
-      message =`${items[0]} and ${items[1]} like this`;
-      break;
-      case 3:
-        message =`${items[0]}, ${items[1]} and ${items[2]} like this`;
-      break;
-    default:
-      message =`${items[0]}, ${items[1]} and (items.length - 2) others like this`;
+// function findElements(items) {
+//   let message = `no one likes this`;
+// switch(items.length){
+//   case 0:
+//   break;
+//   case 1:
+//     message =`${items[0]} likes this`;
+//     break;
+//     case 2:
+//       message =`${items[0]} and ${items[1]} like this`;
+//       break;
+//       case 3:
+//         message =`${items[0]}, ${items[1]} and ${items[2]} like this`;
+//       break;
+//     default:
+//       message =`${items[0]}, ${items[1]} and (items.length - 2) others like this`;
       
 
-}return message;
+// }return message;
 
-console.log(findElements([]));
-console.log(findElements(["Peter"]));
-console.log(findElements(["Jacob", "Alex"]));
-console.log(findElements(["Max", "John", "Mark"]));
+// console.log(findElements([]));
+// console.log(findElements(["Peter"]));
+// console.log(findElements(["Jacob", "Alex"]));
+// console.log(findElements(["Max", "John", "Mark"]));
 
 
 // function nameLike(names) {
@@ -492,4 +492,103 @@ console.log(findElements(["Max", "John", "Mark"]));
 // console.log(nameLike(["Max", "John", "Mark"]));
 // console.log(nameLike(["Alex", "Jacob", "Mark", "Max"]));
 // console.log(nameLike(["Alex", "Jacob", "Mark", "Max", "Marta", "Olha"]));
+
+// const changeEven = (numbers, value) => {
+//   // Change code below this line
+//   const newNumbers = [];
+//   numbers.forEach(number =>{
+//     if (number % 2 === 0) {
+//       newNumbers.push(number + value);
+//     }
+//     else{
+//       newNumbers.push(number);}
+//   });
+//     return newNumbers;
+
+  // for (let i = 0; i < numbers.length; i += 1) {
+  //   if (numbers[i] % 2 === 0) {
+  //     numbers[i] = numbers[i] + value;
+  //   }
+  // }
+  // Change code above this line
+// };
+// console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
+
+
+const users = [
+  {
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    eyeColor: "blue",
+    friends: ["Sharron Pace"],
+    isActive: false,
+    balance: 2811,
+    gender: "male"
+  },
+  {
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    eyeColor: "blue",
+    friends: ["Briana Decker", "Sharron Pace"],
+    isActive: true,
+    balance: 3821,
+    gender: "female"
+  },
+  {
+    name: "Ross Vazquez",
+    email: "rossvazquez@xinware.com",
+    eyeColor: "green",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    isActive: false,
+    balance: 3793,
+    gender: "male"
+  },
+  {
+    name: "Elma Head",
+    email: "elmahead@omatom.com",
+    eyeColor: "green",
+    friends: ["Goldie Gentry", "Aisha Tran"],
+    isActive: true,
+    balance: 2278,
+    gender: "female"
+  },
+  {
+    name: "Carey Barr",
+    email: "careybarr@nurali.com",
+    eyeColor: "blue",
+    friends: ["Jordan Sampson", "Eddie Strong"],
+    isActive: true,
+    balance: 3951,
+    gender: "male"
+  },
+  {
+    name: "Blackburn Dotson",
+    email: "blackburndotson@furnigeer.com",
+    eyeColor: "brown",
+    friends: ["Jacklyn Lucas", "Linda Chapman"],
+    isActive: false,
+    balance: 1498,
+    gender: "male"
+  },
+  {
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    eyeColor: "brown",
+    friends: ["Goldie Gentry", "Briana Decker"],
+    isActive: true,
+    balance: 2764,
+    gender: "female"
+  }
+];
+
+const friendName = "Briana Decker";
+const getUsersWithFriend = (users, friendName) => {
+  // const allFriends = users.flatMap(user => user.friends);
+ const checkFriends = users.filter(user => user.allFriends === friendName)
+ ;
+ return checkFriends;
+};
+
+console.log(getUsersWithFriend(users, friendName));
+
 
