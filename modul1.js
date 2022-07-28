@@ -662,21 +662,92 @@
 // //sortByName();
 // console.log(sortByName(users));
 
-const pizzaPalace = {
-  pizzas: ["Supercheese", "Smoked", "Four meats"],
+// const pizzaPalace = {
+//   pizzas: ["Supercheese", "Smoked", "Four meats"],
  
-  checkPizza(pizzaName) {
-    return this.pizzas.includes(pizzaName);
+//   checkPizza(pizzaName) {
+//     return this.pizzas.includes(pizzaName);
     
-  },
-  order(pizzaName) {
-    const isPizzaAvailable = pizzaPalace.checkPizza(this);
+//   },
+//   order(pizzaName) {
+//     const isPizzaAvailable = pizzaPalace.checkPizza(pizzaName);
 
-    if (!isPizzaAvailable) {
-      return `Sorry, there is no pizza named «${this.pizzaName}»`;
-    }
+//     if (!isPizzaAvailable) {
+//       return `Sorry, there is no pizza named «${this.pizzaName}»`;
+//     }
 
-    return `Order accepted, preparing «${pizzaName}» pizza`;
-  },
+//     return `Order accepted, preparing «${pizzaName}» pizza`;
+//   },
  
-};console.log(pizzaPalace.order("Four meats"));
+// };console.log(pizzaPalace.order("Four meats"));
+
+// class StringBuilder {
+//   constructor(initialValue) {
+//   this.value = initialValue;
+// }
+// getValue(){
+//   return this.value;
+// }
+// padEnd(str){
+//   this.value.push(str);
+// }
+// padStart(str){
+//   this.value.splice(0, 0, str);
+//   // this.value.unshift(str);
+// }
+// padBoth(str){
+//   this.value.push(str);
+//   this.value.splice(0, 0, str);
+// }
+// }
+
+
+// // Change code above this line
+// const builder = new StringBuilder(".");
+// console.log(builder.getValue()); // "."
+// builder.padStart("^");
+// console.log(builder.getValue()); // "^."
+// builder.padEnd("^");
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth("=");
+// console.log(builder.getValue()); // "=^.^="
+
+// class Car {
+//   // Change code below this line
+//   static Roles={
+//     MAX_PRICE: 50000,
+//   }
+//   #price;
+// #role;
+
+//   constructor({ price }) {
+//     this.#price = price;
+
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }
+// get role() {
+//   this.#role = Roles.MAX_PRICE;
+//     return this.#role;
+//   }
+//   set price(newPrice) {
+//     // role = Roles.MAX_PRICE;
+//     if ( newPrice <=  this.#role){
+//       this.#price = newPrice;
+//     }
+
+  
+//   }
+//   // Change code above this line
+// }
+
+// const audi = new Car({ price: 35000 });
+// console.log(audi.price); // 35000
+
+// audi.price = 49000;
+// console.log(audi.price); // 49000
+
+// audi.price = 51000;
+// console.log(audi.price); // 49000
