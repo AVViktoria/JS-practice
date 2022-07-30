@@ -756,7 +756,7 @@
 
 // //? ## Example 4 - Метод filter + every (not so easy)
 // // Будемо працювати з даним списком автомобілів
-// const cars = [
+const cars = [
 //   { make: 'Honda',  model: 'CR-V',     type: 'suv',   amount: 14, price: 24045, onSale: true },
 //   { make: 'Honda',  model: 'Accord',   type: 'sedan', amount: 2,  price: 22455, onSale: true },
 //   { make: 'Mazda',  model: 'Mazda 6',  type: 'sedan', amount: 8,  price: 24195, onSale: false },
@@ -822,34 +822,34 @@
 // console.log( filterBy(cars, filterTrucksOnSale) );
 
 const tweets = [
-  { id: "000", likes: 5, tags: ["js", "nodejs"] },
-  { id: "001", likes: 2, tags: ["html", "css"] },
-  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
-  { id: "003", likes: 8, tags: ["css", "react"] },
-  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] }
-];
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] }
+// ];
 
-// збирає всі теги в новий масив
-const getTags = (tweets = []) =>
-  tweets.reduce((allTags, tweet) => {
-    allTags.push(...tweet.tags);
-    return allTags;
-  }, []);
+// // збирає всі теги в новий масив
+// const getTags = (tweets = []) =>
+//   tweets.reduce((allTags, tweet) => {
+//     allTags.push(...tweet.tags);
+//     return allTags;
+//   }, []);
 
-const tags = getTags(tweets);
-// console.log(tags);
+// const tags = getTags(tweets);
+// // console.log(tags);
 
-// підрахунок скільки разів тег зустрічається в масиві
-const getTagStats = (acc = {}, tag = '') => {
-  if (!acc.hasOwnProperty(tag)) {
-    acc[tag] = 0;
-  }
+// // підрахунок скільки разів тег зустрічається в масиві
+// const getTagStats = (acc = {}, tag = '') => {
+//   if (!acc.hasOwnProperty(tag)) {
+//     acc[tag] = 0;
+//   }
 
-  acc[tag] += 1;
-  return acc;
-};
+//   acc[tag] += 1;
+//   return acc;
+// };
 
-const countTags = (tags) => tags.reduce(getTagStats, {});
+// const countTags = (tags) => tags.reduce(getTagStats, {});
 
-const tagCount = countTags(tags);
+// const tagCount = countTags(tags);
 // console.log('tagCount', tagCount);
