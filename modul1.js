@@ -754,3 +754,102 @@
 
 
 
+// //? ## Example 4 - Метод filter + every (not so easy)
+// // Будемо працювати з даним списком автомобілів
+// const cars = [
+//   { make: 'Honda',  model: 'CR-V',     type: 'suv',   amount: 14, price: 24045, onSale: true },
+//   { make: 'Honda',  model: 'Accord',   type: 'sedan', amount: 2,  price: 22455, onSale: true },
+//   { make: 'Mazda',  model: 'Mazda 6',  type: 'sedan', amount: 8,  price: 24195, onSale: false },
+//   { make: 'Mazda',  model: 'CX-9',     type: 'suv',   amount: 7,  price: 31520, onSale: true },
+//   { make: 'Toyota', model: '4Runner',  type: 'suv',   amount: 19, price: 34210, onSale: false },
+//   { make: 'Toyota', model: 'Sequoia',  type: 'suv',   amount: 16, price: 45560, onSale: false },
+//   { make: 'Toyota', model: 'Tacoma',   type: 'truck', amount: 4,  price: 24320, onSale: true },
+//   { make: 'Ford',   model: 'F-150',    type: 'truck', amount: 11, price: 27110, onSale: true },
+//   { make: 'Ford',   model: 'Fusion',   type: 'sedan', amount: 13, price: 22120, onSale: true },
+//   { make: 'Ford',   model: 'Explorer', type: 'suv',   amount: 6,  price: 31660, onSale: false },
+//   { make: 'Ford',   model: 'Explorer v2', type: 'suv',amount: 0,  price: 31660, onSale: false }
+// ];
+
+// /*
+//   Написати функцію filterBy(cars, filterObject), яка буде отримувати масив, і фільтр у вигляді
+//   об'єкта з потрібними умовами
+//   Повертати масив авто які відповідають всім умовам для переданого фільтра
+// */
+
+// const filterByHondaAndFord = {
+//   make: (make) => ['Honda', 'Ford'].includes(make)
+// }
+
+// const filterCheapFords = {
+//   make: (make) => make === 'Ford',
+//   price: (price) => price < 30_000
+// }
+
+// const filterTrucksOnSale = {
+//   onSale: (onSale) => onSale === true,
+//   type: (type) => type === 'truck'
+// }
+
+// /**
+//  * Отримує об'єкт з фільтрами, і повертає масив із авто для яких
+//  * кожний фільтр з об'єкта повернув true
+//  *
+//  * @param {Object[]} cars
+//  * @param {Object} filterObject об'єкт з колбеками в якості фільтрів
+//  *
+//  * @returns {Object[]}
+//  */
+// function filterBy(cars, filterObject) {
+//   const filterKeys = Object.keys(filterObject);
+//   // console.log('filterKeys', filterKeys);
+
+//   return cars.filter((car) => {
+//     const isAllFiltersOK = filterKeys.every((key = '') => {
+//       const currentFilterFn = filterObject[key];
+//       // console.log(key, filterObject[key], car[key]);
+
+//       // return currentFilterFn( car[key] ); // car.make => Ford, Toyota...
+//       return currentFilterFn( car[key] ); // car.price => 20000...
+//     });
+
+//     return isAllFiltersOK;
+//   });
+// }
+
+
+// console.log( filterBy(cars, filterByHondaAndFord) );
+// console.log( filterBy(cars, filterCheapFords) );
+// console.log( filterBy(cars, filterTrucksOnSale) );
+
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "nodejs"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+  { id: "003", likes: 8, tags: ["css", "react"] },
+  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] }
+];
+
+// збирає всі теги в новий масив
+const getTags = (tweets = []) =>
+  tweets.reduce((allTags, tweet) => {
+    allTags.push(...tweet.tags);
+    return allTags;
+  }, []);
+
+const tags = getTags(tweets);
+// console.log(tags);
+
+// підрахунок скільки разів тег зустрічається в масиві
+const getTagStats = (acc = {}, tag = '') => {
+  if (!acc.hasOwnProperty(tag)) {
+    acc[tag] = 0;
+  }
+
+  acc[tag] += 1;
+  return acc;
+};
+
+const countTags = (tags) => tags.reduce(getTagStats, {});
+
+const tagCount = countTags(tags);
+// console.log('tagCount', tagCount);
