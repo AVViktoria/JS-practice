@@ -829,6 +829,11 @@ const tweets = [
 //   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] }
 // ];
 
+// /**
+//  * 
+//  * @param {*} tweets 
+//  * @returns 
+//  */
 // // збирає всі теги в новий масив
 // const getTags = (tweets = []) =>
 //   tweets.reduce((allTags, tweet) => {
