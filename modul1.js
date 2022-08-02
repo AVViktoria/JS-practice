@@ -133,6 +133,9 @@
  
 // }
 // console.log(countProps({ name: "Mango", age: 2 }));
+
+
+
 // const colors = [
 //   { hex: "#f44336", rgb: "244,67,54" },
 //   { hex: "#2196f3", rgb: "33,150,243" },
@@ -756,7 +759,7 @@
 
 // //? ## Example 4 - Метод filter + every (not so easy)
 // // Будемо працювати з даним списком автомобілів
-const cars = [
+// const cars = [
 //   { make: 'Honda',  model: 'CR-V',     type: 'suv',   amount: 14, price: 24045, onSale: true },
 //   { make: 'Honda',  model: 'Accord',   type: 'sedan', amount: 2,  price: 22455, onSale: true },
 //   { make: 'Mazda',  model: 'Mazda 6',  type: 'sedan', amount: 8,  price: 24195, onSale: false },
@@ -821,7 +824,7 @@ const cars = [
 // console.log( filterBy(cars, filterCheapFords) );
 // console.log( filterBy(cars, filterTrucksOnSale) );
 
-const tweets = [
+// const tweets = [
 //   { id: "000", likes: 5, tags: ["js", "nodejs"] },
 //   { id: "001", likes: 2, tags: ["html", "css"] },
 //   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
@@ -858,3 +861,4 @@ const tweets = [
 
 // const tagCount = countTags(tags);
 // console.log('tagCount', tagCount);
+
