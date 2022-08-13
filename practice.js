@@ -146,14 +146,14 @@
 
 //  *     Task3           Замикання  13 August 2022
 
-function init(arr){
-  let sum = 0;
-  function add (){
-    console.log(arguments);
-    return sum;
-  }
-  return add(arr);
-}
-init([1,2,4,5,7]);
-// console.log(sum); не достучимся из вне, только внутри функции
-add() //тоже не доступна
+// function init(arr){
+//   let sum = 0;
+//   function add (){
+//     console.log(arguments);
+//     return sum;
+//   }
+//   return add(arr);
+// }
+// init([1,2,4,5,7]);
+// // console.log(sum); не достучимся из вне, только внутри функции
+// add() //тоже не доступна
