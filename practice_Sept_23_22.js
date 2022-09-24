@@ -111,29 +111,36 @@
 // 1. Вивести список покемонів (20шт) на сторінку
 // 2. Створити розмітку картки покемона
 // 3. При клікові по картці покемона - відкривати модалку з даними по покемону на якого ми клікнули
-(()=>{
-  getPokemons();
+const rootEl = document.querySelector(".root");
+
+//main
+(async () => {
+  const pokemons = (await getPokemons()).results;
+  const pokemonInfo = await Promise.all(
+    pokemons.map(({ url }) => getPokemon(url))
+  );
+  renderPokemons(pokemonInfo);
 })();
 
 async function getPokemons() {
-  const url = 'https://pokeapi.co/api/v2/';
-  
-  const pokes = await fetch(`${url}`).then(response => {
-    if(response.ok) return response.json();
-  })
-};
+  return await fetch("https://pokeapi.co/api/v2/pokemon").then((response) => {
+    if (response.ok) return response.json();
+  });
+}
 
 async function getPokemon(url) {
-return await fetch(url).then(response => {
-  if(response.ok) return response.json();
-})
+  return fetch(url).then((response) => {
+    if (response.ok) return response.json();
+  });
+}
 
+function renderPokemons(pokemons) {
+  const liMarkup = pokemons.reduce((acc, pokemon) => {
+    return (acc += `<li class="pokemon-card" data-pokemon=${pokemon.name}>
+      <h2>${pokemon.name}</h2>
+      <img src=${pokemon.sprites.other.dream_world.front_default}  />
+      </li>`);
+  }, "");
 
-function renderPokemons(pokemons){
-// const liMarkup = pokemons.reduce((acc, pokemon) => {acc+=`<li><img src="${imageUrl}" alt="Dog"  height ="120px">${}`}, '')
-const liMarkup = pokemons.reduce((acc, pokemon) => {
-const pokemonInfo = getPokemon(pokemon.results.url);
-console.log(pokemonInfo)
-
-
-)}
+  rootEl.innerHTML = `<ul>${liMarkup}</ul>`;
+}
