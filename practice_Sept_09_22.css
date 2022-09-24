@@ -1,4 +1,11 @@
-body {
+ul {
+  list-style: none;
+}
+
+
+
+
+/* body {
   background-image: url(https://i.ibb.co/Wt6q4QP/1-y-X7-Vd1-G1wi9-F0vth-LEh-AA.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -69,4 +76,4 @@ body {
   text-align: center;
   font-size: 60px;
   text-shadow: 3px 3px 2px #CECBCD;
-}
+} */

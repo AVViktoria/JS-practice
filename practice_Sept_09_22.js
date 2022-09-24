@@ -116,6 +116,8 @@
 
 // *            Time
 
+import './main.css';
+
 const refs = {
   dayWeek: document.querySelector(".date-day"),
   dayMonth: document.querySelector(".date"),
