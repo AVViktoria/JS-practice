@@ -59,8 +59,9 @@
 
 
       const scriptURL =
-        'https://script.google.com/macros/s/AKfycbxrEh-0QKrIbxbFLPeZKzpUs3XfFp444gLFivdnQ2drTOIuxkIc-y0YeFnQ9tT6vZGB-Q/exec';
+        'https://script.google.com/macros/s/AKfycbxl-G1Z0YxmiBXynZgLWRrOySlY70T5b5dip0guXyd0oNZWzYbqln4B2jlurYIxmtZmBg/exec';
       const form = document.forms['submit-to-google-sheet'];
+     
 const msg = document.getElementById("msg")
 
 
@@ -68,12 +69,16 @@ const msg = document.getElementById("msg")
         e.preventDefault();
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
           .then(response => {
+            console.log(response)
+            // response.json()
+            // console.log(typeof response )
             msg.innerHTML = "Thank yo for Subscribing!"
             setTimeout(() => {
               msg.innerHTML = ""
                     }, 5000)
                     form.reset()
-          })
+          }).then(res => 
+            console.log(res))
           .catch(error => console.error('Error!', error.message));
       });
   
