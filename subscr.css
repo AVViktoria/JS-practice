@@ -23,9 +23,10 @@
 .title {
   font-size: 1.6rem;
   font-weight: 700;
-  
+  margin-bottom: 0.9em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
 }
-
 
 
 
@@ -53,12 +54,10 @@
 .img__container {
   height: 200px;
   overflow: hidden;
-  margin-bottom: 1.5em;
+  /* margin-bottom: 1.5em; */
 }
 
-.title {
-  margin-bottom: 0.9em;
-}
+
 .subtitle {
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -79,44 +78,49 @@
   padding: 0.5em 0 0.5em 1.5em;
   line-height: 3;
   width: 100%;
-  border: 1px solid #d9d9d9;
+  border: 2px solid #efbba0;
   border-radius: 0.5em;
   margin-bottom: 1em;
+  
 }
 
 ::-webkit-input-placeholder {
-  color: #111127;
+  color: #656565;
 }
 
 :-ms-input-placeholder {
-  color: #111127;
+  color: #656565;
 }
 
 ::-ms-input-placeholder {
-  color: #111127;
+  color: #656565;
 }
 
 ::placeholder {
-  color: #111127;
+  color: #656565;
 }
 
 .subscribe {
   color: #fff;
   font-size: 1.3rem;
   font-weight: 700;
-  background-color: #f55951;
+  background-color: #e26e2f;
   padding: 0.9em 0;
   display: inline-block;
   border: none;
   border-radius: 0.5em;
   width: 100%;
-  margin-bottom: 1.3em;
+  margin-bottom: 20px;
+  cursor: pointer;
+
 }
 
 .text {
   font-size: 0.9rem;
-  width: 90%;
+  width: 70%;
   text-align: center;
+  margin: 0;
+  color: #656565;
 }
 
 /* body{
