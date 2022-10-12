@@ -9,7 +9,7 @@ const msg = document.getElementById("msg")
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
           .then(response => {
             console.log(response)
-            msg.innerHTML = "Thank yo for Subscribing!"
+            msg.innerHTML = "Thank you for subscribing!"
             setTimeout(() => {
               msg.innerHTML = ""
                     }, 5000)

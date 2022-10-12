@@ -3,7 +3,7 @@
   color: #000;
   font-family: 'Muli', sans-serif;
   font-size: 1rem;
-  background-color: #F1E8E6;
+  background-color: #b9b7b7;
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -24,7 +24,6 @@
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 0.9em;
-  margin-bottom: 0.5em;
   font-weight: 700;
 }
 
@@ -71,13 +70,13 @@
   display: grid;
   place-items: center;
   padding: 0 2em;
-  margin-bottom: 1.8em;
+  margin-bottom: 1.2em;
 }
 
 .mail {
   padding: 0.5em 0 0.5em 1.5em;
   line-height: 3;
-  width: 100%;
+  width: 90%;
   border: 2px solid #efbba0;
   border-radius: 0.5em;
   margin-bottom: 1em;
@@ -121,6 +120,11 @@
   text-align: center;
   margin: 0;
   color: #656565;
+}
+.hero__sub-span{
+  color: rgb(29, 109, 29);
+  /* margin-top: 10px; */
+  display:  block;
 }
 
 /* body{
